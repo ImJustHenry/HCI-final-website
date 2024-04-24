@@ -27,7 +27,8 @@
 
 .bcr-carousel-img{
     width: auto;
-    max-height: 560px;
+    max-height: 520px;
     object-fit: cover;
     display: inline-block;
+    border-radius: 25px; 
 }
