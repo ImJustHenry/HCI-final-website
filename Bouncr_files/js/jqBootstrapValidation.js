@@ -1,11 +1,11 @@
-/* jqbsValidation
- * A plugin for automating validation on Twitter bs formatted forms.
+/* jqBootstrapValidation
+ * A plugin for automating validation on Twitter Bootstrap formatted forms.
  *
  * v1.3.6
  *
  * License: MIT <http://opensource.org/licenses/mit-license.php> - see LICENSE file
  *
- * http://ReactiveRaven.github.com/jqbsValidation/
+ * http://ReactiveRaven.github.com/jqBootstrapValidation/
  */
 
 (function($) {
@@ -68,7 +68,7 @@
             }
             $form.addClass("error");
             if ($.isFunction(settings.options.submitError)) {
-              settings.options.submitError($form, e, $inputs.jqbsValidation("collectErrors", true));
+              settings.options.submitError($form, e, $inputs.jqBootstrapValidation("collectErrors", true));
             }
           } else {
             $form.removeClass("error");
@@ -917,21 +917,21 @@
     return context[func].apply(this, args);
   }
 
-  $.fn.jqbsValidation = function(method) {
+  $.fn.jqBootstrapValidation = function(method) {
 
     if (defaults.methods[method]) {
       return defaults.methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
     } else if (typeof method === 'object' || !method) {
       return defaults.methods.init.apply(this, arguments);
     } else {
-      $.error('Method ' + method + ' does not exist on jQuery.jqbsValidation');
+      $.error('Method ' + method + ' does not exist on jQuery.jqBootstrapValidation');
       return null;
     }
 
   };
 
-  $.jqbsValidation = function(options) {
-    $(":input").not("[type=image],[type=submit]").jqbsValidation.apply(this, arguments);
+  $.jqBootstrapValidation = function(options) {
+    $(":input").not("[type=image],[type=submit]").jqBootstrapValidation.apply(this, arguments);
   };
 
 })(jQuery);
